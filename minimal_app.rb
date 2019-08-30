@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # from flask import Flask
 require_relative 'health_potion'
 
