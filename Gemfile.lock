@@ -18,6 +18,7 @@ GEM
     pry-doc (1.0.0)
       pry (~> 0.11)
       yard (~> 0.9.11)
+    rack (2.0.7)
     rainbow (3.0.0)
     rubocop (0.74.0)
       jaro_winkler (~> 1.5.1)
@@ -37,6 +38,7 @@ DEPENDENCIES
   pry (~> 0.12.2)
   pry-byebug (~> 3.7)
   pry-doc (~> 1.0)
+  rack (~> 2.0)
   rubocop (~> 0.74.0)
 
 BUNDLED WITH
