@@ -6,6 +6,12 @@ require_relative 'health_potion'
 # app = Flask(__name__)
 app = HealthPotion.new
 
+app.route '/', :hello_world do
+  'Hello, World!'
+end
+
+app.run
+
 # @app.route('/')
 # def hello_world():
 #     return 'Hello, World!'
