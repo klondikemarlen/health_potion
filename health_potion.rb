@@ -13,8 +13,10 @@ class HealthPotion
     @routes_by_name = {}
   end
 
-  def route(path, name, &block)
-    @routes[path] = block
+  # The callable must return some kind of response like
+  # [body:String, status:Integer, headers:Hash]
+  def route(path, name, &callable)
+    @routes[path] = callable
     @routes_by_name[name] = path
   end
 
@@ -28,10 +30,11 @@ class HealthPotion
   # exactly three values: The status, the headers, and the body.
   def call(env)
     @env = env
-    Response.new(routes[path]).call
+    simple_response = routes[request_path].call
+    RackSafeResponse.new(simple_response).call
   end
 
-  def path
+  def request_path
     env['REQUEST_PATH']
   end
 end

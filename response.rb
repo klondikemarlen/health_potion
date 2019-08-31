@@ -1,10 +1,10 @@
 # frozen_string_literal: true
 
-class Response
+class RackSafeResponse
   attr_reader :data
 
-  def initialize(handler)
-    @data = handler.call
+  def initialize(data)
+    @data = data
     @data = build_valid_response_from_data
   end
 
