@@ -18,7 +18,7 @@ GEM
     pry-doc (1.0.0)
       pry (~> 0.11)
       yard (~> 0.9.11)
-    rack (2.0.7)
+    rack (2.0.8)
     rainbow (3.0.0)
     rubocop (0.74.0)
       jaro_winkler (~> 1.5.1)
